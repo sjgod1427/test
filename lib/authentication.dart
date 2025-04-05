@@ -74,47 +74,6 @@ class AuthServices {
     }
   }
 
-  // Future<String?> signInWithGoogle(BuildContext context) async {
-  //   try {
-  //     // Trigger the Google Sign-In flow
-  //     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-
-  //     if (googleUser == null) {
-  //       // The user canceled the sign-in
-  //       return null;
-  //     }
-
-  //     // Obtain the auth details from the Google Sign-In
-  //     final GoogleSignInAuthentication googleAuth =
-  //         await googleUser.authentication;
-
-  //     // Create a new credential
-  //     final OAuthCredential credential = GoogleAuthProvider.credential(
-  //       accessToken: googleAuth.accessToken,
-  //       idToken: googleAuth.idToken,
-  //     );
-
-  //     // Sign in to Firebase with the Google credentials
-  //     final UserCredential userCredential =
-  //         await FirebaseAuth.instance.signInWithCredential(credential);
-
-  //     // Retrieve the Firebase ID token
-  //     final String? token = await userCredential.user?.getIdToken();
-  //     print('Token: $token'); // Log or use this token as needed
-
-  //     // Navigate to the Home Screen
-  //     Navigator.pushReplacement(
-  //       context,
-  //       MaterialPageRoute(builder: (context) => HomeScreen()),
-  //     );
-
-  //     return token;
-  //   } catch (e) {
-  //     print('Error during Google Sign-In: $e');
-  //     return null;
-  //   }
-  // }
-
   Future<String?> signInWithGoogle(BuildContext context) async {
     try {
       // Trigger the Google Sign-In flow
